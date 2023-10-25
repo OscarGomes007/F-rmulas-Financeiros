@@ -1,0 +1,71 @@
+#1. Cálculo do Valor Futuro (FV) em um investimento:
+PV = float(input("Digite o valor presente (PV) em reais: "))
+r = float(input("Digite a taxa de juros anual como uma porcentagem: ")) / 100
+n = int(input("Digite o número de anos para o investimento: "))
+
+# Calculando o valor futuro
+FV = PV * (1 + r)**n
+
+# Exibindo o resultado
+print("O valor futuro do investimento será: {:.2f} reais".format(FV))
+
+############
+
+#2. Cálculo do Valor Presente (PV) de um investimento futuro:
+FV = float(input("Digite o valor futuro (FV) em reais: "))
+r = float(input("Digite a taxa de juros anual como uma porcentagem: ")) / 100
+n = int(input("Digite o número de anos para o investimento: "))
+
+# Calculando o valor presente
+PV = FV / (1 + r)**n
+
+# Exibindo o resultado
+print("O valor presente necessário para atingir o objetivo será: {:.2f} reais".format(PV))
+
+############
+
+#3. Cálculo da Taxa de Juros (r) para um investimento:
+PV = float(input("Digite o valor presente (PV) em reais: "))
+FV = float(input("Digite o valor futuro (FV) em reais: "))
+n = int(input("Digite o número de anos para o investimento: "))
+
+# Calculando a taxa de juros
+r = (FV / PV) ** (1/n) - 1
+
+# Exibindo o resultado
+print("A taxa de juros anual necessária será: {:.2%}".format(r))
+
+###################
+
+4. Agora, para quem quer investir, e acumular riqueza com contribuições mensal , isto é, adicionar uma certa quantia no investimento mensalmente.....
+PV = float(input("Digite o valor presente (PV) em reais: "))
+r = float(input("Digite a taxa de juros anual como uma porcentagem: ")) / 100
+n = int(input("Digite o número total de períodos de investimento (anos): "))
+PMT = float(input("Digite o valor da contribuição mensal em reais: "))
+
+# Calculando o valor futuro levando em conta as contribuições mensais
+FV = PV * (1 + r)**n + PMT * (((1 + r)**n - 1) / r)
+
+# Exibindo o resultado
+print("O valor futuro do investimento com contribuições mensais será: {:.2f} reais".format(FV))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
